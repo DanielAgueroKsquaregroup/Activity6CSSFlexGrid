@@ -4,8 +4,17 @@
     font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
 }
 
+body{
+    background-color: #bfc6d6;
+}
+
 img{
     width: 30px;
+    margin-right: 10px;
+}
+
+h3{
+    margin: 0 0 10px;
 }
 
 .container{
@@ -14,15 +23,24 @@ img{
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
     gap: 40px;
+    margin-top: 20px;
 }
 
-.item-a, .item-b, .item-c, .item-d, .item-e, .avatar{
+.items, .avatar{
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: .1s all ease-in-out;
 }
 
 .avatar{
     flex-direction: row;
+    padding: 0;
+    justify-content: left;
+    margin-bottom: 20px;
 }
 
 .item-a{
@@ -48,4 +66,14 @@ img{
 .item-e{
     grid-column: 2/4;
     grid-row: 2/3;
+}
+
+.items:hover, .items:hover .avatar{
+    background-color: #0000FF;
+    color: #ffffff;
+    transition: .4s all ease-in-out;
+}
+
+.items:hover .avatar img {
+    content: url(../img/avatar_hover.png);    
 }
